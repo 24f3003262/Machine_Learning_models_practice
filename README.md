@@ -24,4 +24,4 @@ In its simplest form (Simple Linear Regression), the relationship is represented
 
 To determine the most accurate line, we use a method called Ordinary Least Squares (OLS).
 
-The algorithm calculates the distance between each actual data point and the line (these distances are called residuals). It then squares these distances and sums them up. The "best" line is the one that results in the minimum possible sum of squared errors
+The algorithm calculates the distance between each actual data point and the line (these distances are called residuals). It then squares these distances and sums them up. The "best" line is the one that results in the minimum possible sum of squared errors. (MEAN SQUARED ERROR)
