@@ -12,7 +12,7 @@ Linear regression is a foundational statistical method used to model the relatio
 
 In its simplest form (Simple Linear Regression), the relationship is represented by the equation of a line:
 
-                        Y=b0X+b1X+e
+                        Y=b0+b1X+e
 
 - Y: The target variable you want to predict (e.g., house price).
 - X: The input variable used for prediction (e.g., square footage).
@@ -25,3 +25,11 @@ In its simplest form (Simple Linear Regression), the relationship is represented
 To determine the most accurate line, we use a method called Ordinary Least Squares (OLS).
 
 The algorithm calculates the distance between each actual data point and the line (these distances are called residuals). It then squares these distances and sums them up. The "best" line is the one that results in the minimum possible sum of squared errors. (MEAN SQUARED ERROR)
+
+### Implementation
+
+To find the minimum error, we will take the partial derivatives w.r.t slope and intercept of the error function and find the steepest descent.
+
+Then we use gradient descent on the slope and also on the intercept to find their best solutions.
+
+The learning rate in gradient descent - if too big, not effectively best solution. If too small, too many iterations.
