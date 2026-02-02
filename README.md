@@ -33,3 +33,25 @@ To find the minimum error, we will take the partial derivatives w.r.t slope and 
 Then we use gradient descent on the slope and also on the intercept to find their best solutions.
 
 The learning rate in gradient descent - if too big, not effectively best solution. If too small, too many iterations.
+
+Second approach (Closed-form):- Mathematically
+We find the residual sum of squares.....sum of the square of difference of actual y values and the predicted y values
+This process can be used for multiple dimensions :- y=m1x1+m2x2+...+mnxn+b 
+To convert it into matrix we can consider last term as :- m0=b and x0=1
+
+so one vector will be [1 x1 x2 x3 ...]^T (let's call it X)  and another [b m1 m2 m3 ....]^T (coefficients)(parameters)(let's call it beta)
+
+so it's just XB (B=beta)
+
+on a smallest scale we can say y_i_predicted=x_i*B
+
+RSS(B)=(y-X.B)^T(y-X.B) [for squaring we do A^2=A^TA]
+
+We need to find optimal B for a problem
+
+for that we find partial derivative of RSS w.r.t B which is = -2X^Ty+2X^TXB and make that equal to zero to find the extremum
+
+then X^Ty=X^TXB
+multiplying both sides by (X^TX)^-1
+
+we get (X^TX)^-1.X^Ty=B here B is the most efficient B
